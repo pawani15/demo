@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "412729532617",
+    "firebase_url": "https://edecofy-24f8c.firebaseio.com",
+    "project_id": "edecofy-24f8c",
+    "storage_bucket": "edecofy-24f8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412729532617:android:6689b9b0bc378110222d18",
+        "android_client_info": {
+          "package_name": "com.adrav.edecofy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412729532617-3kis62kmkaasiu7h0idjhrspql7ljosr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZjmO-KHYMmFTTfrcmsFw8r97GqP580qU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412729532617-3kis62kmkaasiu7h0idjhrspql7ljosr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
