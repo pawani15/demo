@@ -1,0 +1,107 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --profile
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The getter 'isPauseEvent' was called on null.
+Receiver: null
+Tried calling: isPauseEvent
+
+```
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      FlutterDevice.exitApps.<anonymous closure> (package:flutter_tools/src/resident_runner.dart:179:40)
+#2      ListMixin.any (dart:collection/list.dart:126:15)
+#3      FlutterDevice.exitApps (package:flutter_tools/src/resident_runner.dart:176:22)
+<asynchronous suspension>
+#4      ResidentRunner.exitApp (package:flutter_tools/src/resident_runner.dart:861:26)
+<asynchronous suspension>
+#5      ColdRunner.cleanupAfterSignal (package:flutter_tools/src/run_cold.dart:164:11)
+<asynchronous suspension>
+#6      TerminalHandler._cleanUp (package:flutter_tools/src/resident_runner.dart:1149:26)
+<asynchronous suspension>
+#7      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1123:13)
+<asynchronous suspension>
+#8      _rootRunUnary (dart:async/zone.dart:1132:38)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#10     _CustomZone.runUnaryGuarded (dart:async/zone.dart:931:7)
+#11     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:336:11)
+#12     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:263:7)
+#13     _SyncBroadcastStreamController._sendData (dart:async/broadcast_stream_controller.dart:375:20)
+#14     _BroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:250:5)
+#15     _AsBroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:474:11)
+#16     _rootRunUnary (dart:async/zone.dart:1132:38)
+#17     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#18     _CustomZone.runUnaryGuarded (dart:async/zone.dart:931:7)
+#19     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:336:11)
+#20     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:263:7)
+#21     _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:68:11)
+#22     _EventSinkWrapper.add (dart:async/stream_transformers.dart:15:11)
+#23     _StringAdapterSink.add (dart:convert/string_conversion.dart:236:11)
+#24     _StringAdapterSink.addSlice (dart:convert/string_conversion.dart:241:7)
+#25     _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:312:20)
+#26     _ErrorHandlingAsciiDecoderSink.addSlice (dart:convert/ascii.dart:252:17)
+#27     _ErrorHandlingAsciiDecoderSink.add (dart:convert/ascii.dart:238:5)
+#28     _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:72:18)
+#29     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:120:24)
+#30     _rootRunUnary (dart:async/zone.dart:1132:38)
+#31     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#32     _CustomZone.runUnaryGuarded (dart:async/zone.dart:931:7)
+#33     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:336:11)
+#34     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:263:7)
+#35     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:764:19)
+#36     _StreamController._add (dart:async/stream_controller.dart:640:7)
+#37     _StreamController.add (dart:async/stream_controller.dart:586:5)
+#38     _Socket._onData (dart:io-patch/socket_patch.dart:1791:41)
+#39     _rootRunUnary (dart:async/zone.dart:1136:13)
+#40     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#41     _CustomZone.runUnaryGuarded (dart:async/zone.dart:931:7)
+#42     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:336:11)
+#43     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:263:7)
+#44     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:764:19)
+#45     _StreamController._add (dart:async/stream_controller.dart:640:7)
+#46     _StreamController.add (dart:async/stream_controller.dart:586:5)
+#47     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1339:33)
+#48     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:860:14)
+#49     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#50     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#51     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:116:13)
+#52     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:173:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, v1.9.1+hotfix.6, on Microsoft Windows [Version 10.0.10586], locale en-US)
+    [32m•[39m Flutter version 1.9.1+hotfix.6 at C:\src\flutter
+    [32m•[39m Framework revision 68587a0916 (7 months ago), 2019-09-13 19:46:58 -0700
+    [32m•[39m Engine revision b863200c37
+    [32m•[39m Dart version 2.5.0
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    [32m•[39m Android SDK at C:\Users\user\AppData\Local\Android\sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-29, build-tools 29.0.2
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Android Studio (version 3.5)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin version 42.1.1
+    [32m•[39m Dart plugin version 191.8593
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[33m[!][39m Android Studio (version 3.2)
+    [32m•[39m Android Studio at C:\Users\user\Desktop\android-studio-ide-181.4913314-windows\android-studio
+    [31m✗[39m Flutter plugin not installed; this adds Flutter specific functionality.
+    [31m✗[39m Dart plugin not installed; this adds Dart specific functionality.
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b05)
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m SM J701F • 52002a23fa3cc463 • android-arm • Android 9 (API 28)
+
+[33m![39m Doctor found issues in 1 category.
+```
